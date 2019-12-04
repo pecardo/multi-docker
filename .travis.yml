@@ -2,10 +2,8 @@ sudo: required
 services:
   - docker
 
-
 before_install:
   -docker build -t pecardo/react-test -f ./client/Dockerfile.dev ./client
-
 
 script:
   - docker run pecardo/react-test npm test -- --coverage
