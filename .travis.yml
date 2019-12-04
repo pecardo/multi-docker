@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  -docker build -t pecardo/multi -f ./client/Dockerfile.dev ./client
+  - docker build -t pecardo/multi -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run pecardo/multi npm test -- --coverage
