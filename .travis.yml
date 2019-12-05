@@ -13,7 +13,7 @@ after_success:
   - docker build -t pecardo/multi-nginx ./nginx
   - docker build -t pecardo/multi-server ./server
   - docker build -t pecardo/multi-worker ./worker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
     - docker push pecardo/multi-client
     - docker push pecardo/multi-nginx
     - docker push pecardo/multi-server
